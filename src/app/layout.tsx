@@ -6,6 +6,9 @@ import { Inter, Roboto_Mono } from "next/font/google";
 
 import { createClient } from "@/prismicio";
 
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -50,9 +53,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(inter.variable, roboto_mono.variable)}>
-        <header>Header</header>
+        <Header />
         {children}
-        <footer>Footer</footer>
+        <Footer />
       </body>
     </html>
   );
