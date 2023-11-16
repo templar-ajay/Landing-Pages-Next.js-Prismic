@@ -16,12 +16,12 @@ export const repositoryName = config.repositoryName;
 const routes: prismic.ClientConfig["routes"] = [
   // Examples:
   // {
-  // 	type: "homepage",
-  // 	path: "/",
+  //   type: "homepage",
+  //   path: "/",
   // },
   // {
-  // 	type: "page",
-  // 	path: "/:uid",
+  //   type: "page",
+  //   path: "/:uid",
   // },
 ];
 
