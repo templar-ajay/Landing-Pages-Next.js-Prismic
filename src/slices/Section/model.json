@@ -1,7 +1,7 @@
 {
   "id": "section1",
   "type": "SharedSlice",
-  "name": "Section1",
+  "name": "Section",
   "description": "Section1",
   "variations": [
     {
@@ -25,7 +25,10 @@
           "type": "Image",
           "config": {
             "label": "Image",
-            "constraint": {},
+            "constraint": {
+              "width": 0,
+              "height": null
+            },
             "thumbnails": []
           }
         },
@@ -35,7 +38,7 @@
             "label": "Text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,strong,em,list-item,o-list-item,hyperlink"
+            "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
           }
         },
         "cta_text": {
@@ -75,7 +78,10 @@
           "type": "Image",
           "config": {
             "label": "Transition In Image",
-            "constraint": {},
+            "constraint": {
+              "width": 1280,
+              "height": 200
+            },
             "thumbnails": []
           }
         },
@@ -83,7 +89,10 @@
           "type": "Image",
           "config": {
             "label": "Transition Out Image",
-            "constraint": {},
+            "constraint": {
+              "width": 1280,
+              "height": 200
+            },
             "thumbnails": []
           }
         }

@@ -91,7 +91,7 @@ export type HeaderDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomepageDocumentDataSlicesSlice = HeroSlice;
+type HomepageDocumentDataSlicesSlice = Section1Slice | HeroSlice;
 
 /**
  * Content for Homepage documents
@@ -397,11 +397,11 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
- * Primary content in *Section1 → Primary*
+ * Primary content in *Section → Primary*
  */
 export interface Section1SliceDefaultPrimary {
   /**
-   * Title field in *Section1 → Primary*
+   * Title field in *Section → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -411,7 +411,7 @@ export interface Section1SliceDefaultPrimary {
   title: prismic.RichTextField;
 
   /**
-   * Image field in *Section1 → Primary*
+   * Image field in *Section → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -421,7 +421,7 @@ export interface Section1SliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Text field in *Section1 → Primary*
+   * Text field in *Section → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -431,7 +431,7 @@ export interface Section1SliceDefaultPrimary {
   text: prismic.RichTextField;
 
   /**
-   * CTA Text field in *Section1 → Primary*
+   * CTA Text field in *Section → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -441,7 +441,7 @@ export interface Section1SliceDefaultPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
-   * CTA Link field in *Section1 → Primary*
+   * CTA Link field in *Section → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -451,7 +451,7 @@ export interface Section1SliceDefaultPrimary {
   cta_link: prismic.LinkField;
 
   /**
-   * After CTA Text field in *Section1 → Primary*
+   * After CTA Text field in *Section → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -461,7 +461,7 @@ export interface Section1SliceDefaultPrimary {
   after_cta_text: prismic.RichTextField;
 
   /**
-   * Background Image field in *Section1 → Primary*
+   * Background Image field in *Section → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -471,7 +471,7 @@ export interface Section1SliceDefaultPrimary {
   background_image: prismic.ImageField<never>;
 
   /**
-   * Transition In Image field in *Section1 → Primary*
+   * Transition In Image field in *Section → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -481,7 +481,7 @@ export interface Section1SliceDefaultPrimary {
   transition_image_1: prismic.ImageField<never>;
 
   /**
-   * Transition Out Image field in *Section1 → Primary*
+   * Transition Out Image field in *Section → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -492,7 +492,7 @@ export interface Section1SliceDefaultPrimary {
 }
 
 /**
- * Default variation for Section1 Slice
+ * Default variation for Section Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -505,12 +505,12 @@ export type Section1SliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Section1*
+ * Slice variation for *Section*
  */
 type Section1SliceVariation = Section1SliceDefault;
 
 /**
- * Section1 Shared Slice
+ * Section Shared Slice
  *
  * - **API ID**: `section1`
  * - **Description**: Section1

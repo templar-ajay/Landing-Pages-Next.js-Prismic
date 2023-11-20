@@ -85,7 +85,7 @@
           "config": {
             "label": "Transition Image",
             "constraint": {
-              "width": 1278,
+              "width": 1280,
               "height": 200
             },
             "thumbnails": []

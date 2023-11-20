@@ -47,7 +47,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  * Component for "Hero" Slices.
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
-  console.log("slice", slice);
+  // console.log("slice", slice);
   return (
     <div className="relative">
       <PrismicNextImage
@@ -92,10 +92,17 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             <PrismicNextImage key={"item-" + index} field={key_point_image} />
           ))}
         </div>
-        <div className="transition-div absolute bottom-0 left-0">
-          <PrismicNextImage field={slice.primary.transition_image} />
-        </div>
-        <div className="pb-[200px]"></div>
+        {Boolean(slice.primary.transition_image) && (
+          <>
+            <div className="transition-div absolute bottom-0 left-0 w-full">
+              <PrismicNextImage
+                field={slice.primary.transition_image}
+                className="w-full"
+              />
+            </div>
+            <div className="pb-[200px]"></div>
+          </>
+        )}
       </Bounded>
     </div>
   );
