@@ -1,0 +1,304 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"popup_video": {
+				"embed_url": "https://twitter.com/prismicio/status/1354835716430319617",
+				"author_name": "Prismic",
+				"author_url": "https://twitter.com/prismicio",
+				"html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Does anyone want to create a wildly popular website for discussing &#39;Wall Street Bets&#39; using Prismic?<br><br>It may or may not have to look a lot like <a href=\"https://twitter.com/hashtag/reddit?src=hash&amp;ref_src=twsrc%5Etfw\">#reddit</a> and we won&#39;t make it private.<br><br>Just asking for some friends...</p>&mdash; Prismic (@prismicio) <a href=\"https://twitter.com/prismicio/status/1354835716430319617?ref_src=twsrc%5Etfw\">January 28, 2021</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+				"type": "rich",
+				"cache_age": "3153600000",
+				"provider_name": "Twitter",
+				"provider_url": "http://www.twitter.com/",
+				"version": "1.0",
+				"all": {
+					"embed_url": "https://twitter.com/prismicio/status/1354835716430319617",
+					"author_name": "Prismic",
+					"author_url": "https://twitter.com/prismicio",
+					"html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Does anyone want to create a wildly popular website for discussing &#39;Wall Street Bets&#39; using Prismic?<br><br>It may or may not have to look a lot like <a href=\"https://twitter.com/hashtag/reddit?src=hash&amp;ref_src=twsrc%5Etfw\">#reddit</a> and we won&#39;t make it private.<br><br>Just asking for some friends...</p>&mdash; Prismic (@prismicio) <a href=\"https://twitter.com/prismicio/status/1354835716430319617?ref_src=twsrc%5Etfw\">January 28, 2021</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+					"width": 550,
+					"height": null,
+					"type": "rich",
+					"cache_age": "3153600000",
+					"provider_name": "Twitter",
+					"provider_url": "http://www.twitter.com/",
+					"version": "1.0"
+				},
+				"__TYPE__": "EmbedContent"
+			},
+			"cta_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"header": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Australian Doctor Reveals The Shocking Secret To Losing Weight Effortlessly Without Starving Yourself Or Spending Hours In The Gym",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"bond": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Tired of the Scams from the Broken WeightLoss Industry?",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"sub_header": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Discover The New Scientifically Proven \"Habit Formula\" That Helps People Of All Ages Boost Energy, Improve Health And Melt Away Fat For Good",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"image": {
+				"url": "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxMHx8ZnJ1aXR8ZW58MHx8fHwxNzAwMzkyNDcyfDA&ixlib=rb-4.0.3&q=85&rect=0%2C240%2C4608%2C2592&w=1280&h=720",
+				"origin": {
+					"id": "5JQH9Iqnm9o",
+					"url": "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxMHx8ZnJ1aXR8ZW58MHx8fHwxNzAwMzkyNDcyfDA&ixlib=rb-4.0.3&q=85",
+					"width": 4608,
+					"height": 3072
+				},
+				"width": 1280,
+				"height": 720,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 240
+					}
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"cta_text": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "CLAIM YOUR FREE SESSION NOW"
+			},
+			"background_image": {
+				"url": "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw1fHxmcnVpdHxlbnwwfHx8fDE3MDAzOTI0NzJ8MA&ixlib=rb-4.0.3&q=85",
+				"origin": {
+					"id": "pCjw_ygKCv0",
+					"url": "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw1fHxmcnVpdHxlbnwwfHx8fDE3MDAzOTI0NzJ8MA&ixlib=rb-4.0.3&q=85",
+					"width": 3648,
+					"height": 5472
+				},
+				"width": 3648,
+				"height": 5472,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"transition_image": {
+				"url": "https://images.unsplash.com/photo-1457296898342-cdd24585d095?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyNnx8ZnJ1aXR8ZW58MHx8fHwxNzAwMzkyNDcyfDA&ixlib=rb-4.0.3&q=85&rect=0%2C1068%2C3600%2C563&w=1278&h=200",
+				"origin": {
+					"id": "0DtoVEDaJbs",
+					"url": "https://images.unsplash.com/photo-1457296898342-cdd24585d095?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyNnx8ZnJ1aXR8ZW58MHx8fHwxNzAwMzkyNDcyfDA&ixlib=rb-4.0.3&q=85",
+					"width": 3600,
+					"height": 2700
+				},
+				"width": 1278,
+				"height": 200,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 1068
+					}
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"key_point_image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+								"width": 5616,
+								"height": 3744
+							},
+							"url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?rect=0%2C0%2C5616%2C3744&w=150&h=100",
+							"width": 150,
+							"height": 100,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"key_point_image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+								"width": 3456,
+								"height": 3456
+							},
+							"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?rect=0%2C576%2C3456%2C2304&w=150&h=100",
+							"width": 150,
+							"height": 100,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 576
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"key_point_image",
+						{
+							"__TYPE__": "ImageContent",
+							"url": "https://images.unsplash.com/photo-1574856344991-aaa31b6f4ce3?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw2fHxmcnVpdHxlbnwwfHx8fDE3MDAzOTI0NzJ8MA&ixlib=rb-4.0.3&q=85&rect=0%2C1008%2C3024%2C2016&w=150&h=100",
+							"origin": {
+								"id": "KVv5lFOMY1E",
+								"url": "https://images.unsplash.com/photo-1574856344991-aaa31b6f4ce3?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw2fHxmcnVpdHxlbnwwfHx8fDE3MDAzOTI0NzJ8MA&ixlib=rb-4.0.3&q=85",
+								"width": 3024,
+								"height": 4032
+							},
+							"width": 150,
+							"height": 100,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 1008
+								}
+							},
+							"thumbnails": {}
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"key_point_image",
+						{
+							"__TYPE__": "ImageContent",
+							"url": "https://images.unsplash.com/photo-1547514701-42782101795e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxM3x8ZnJ1aXR8ZW58MHx8fHwxNzAwMzkyNDcyfDA&ixlib=rb-4.0.3&q=85&rect=0%2C1667%2C4000%2C2667&w=150&h=100",
+							"origin": {
+								"id": "nibgG33H0F8",
+								"url": "https://images.unsplash.com/photo-1547514701-42782101795e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxM3x8ZnJ1aXR8ZW58MHx8fHwxNzAwMzkyNDcyfDA&ixlib=rb-4.0.3&q=85",
+								"width": 4000,
+								"height": 6000
+							},
+							"width": 150,
+							"height": 100,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 1667
+								}
+							},
+							"thumbnails": {}
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"key_point_image",
+						{
+							"__TYPE__": "ImageContent",
+							"url": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxmcnVpdHxlbnwwfHx8fDE3MDAzOTI0NzJ8MA&ixlib=rb-4.0.3&q=85&rect=0%2C1146%2C2749%2C1833&w=150&h=100",
+							"origin": {
+								"id": "nAOZCYcLND8",
+								"url": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxmcnVpdHxlbnwwfHx8fDE3MDAzOTI0NzJ8MA&ixlib=rb-4.0.3&q=85",
+								"width": 2749,
+								"height": 4124
+							},
+							"width": 150,
+							"height": 100,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 1146
+								}
+							},
+							"thumbnails": {}
+						}
+					]
+				]
+			}
+		]
+	}
+]

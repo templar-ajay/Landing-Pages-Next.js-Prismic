@@ -91,6 +91,82 @@ export type HeaderDocument<Lang extends string = string> =
     Lang
   >;
 
+type HomepageDocumentDataSlicesSlice = HeroSlice;
+
+/**
+ * Content for Homepage documents
+ */
+interface HomepageDocumentData {
+  /**
+   * Title field in *Homepage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *Homepage*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice> /**
+   * Meta Title field in *Homepage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: homepage.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Homepage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: homepage.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Homepage*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Homepage document from Prismic
+ *
+ * - **API ID**: `homepage`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HomepageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<HomepageDocumentData>,
+    "homepage",
+    Lang
+  >;
+
 /**
  * Content for Settings documents
  */
@@ -178,7 +254,272 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HeaderDocument | SettingsDocument;
+export type AllDocumentTypes =
+  | HeaderDocument
+  | HomepageDocument
+  | SettingsDocument;
+
+/**
+ * Primary content in *Hero → Primary*
+ */
+export interface HeroSliceDefaultPrimary {
+  /**
+   * Bond field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.bond
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  bond: prismic.RichTextField;
+
+  /**
+   * Header field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.header
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header: prismic.RichTextField;
+
+  /**
+   * Sub Header field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.sub_header
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  sub_header: prismic.RichTextField;
+
+  /**
+   * Image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Popup Video field in *Hero → Primary*
+   *
+   * - **Field Type**: Embed
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.popup_video
+   * - **Documentation**: https://prismic.io/docs/field#embed
+   */
+  popup_video: prismic.EmbedField;
+
+  /**
+   * CTA Text field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.cta_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_text: prismic.KeyTextField;
+
+  /**
+   * CTA Link field in *Hero → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.cta_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_link: prismic.LinkField;
+
+  /**
+   * Background Image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
+
+  /**
+   * Transition Image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.transition_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  transition_image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *Hero → Items*
+ */
+export interface HeroSliceDefaultItem {
+  /**
+   * Key Point Image field in *Hero → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.items[].key_point_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  key_point_image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Hero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeroSliceDefaultPrimary>,
+  Simplify<HeroSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Hero*
+ */
+type HeroSliceVariation = HeroSliceDefault;
+
+/**
+ * Hero Shared Slice
+ *
+ * - **API ID**: `hero`
+ * - **Description**: Hero
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *Section1 → Primary*
+ */
+export interface Section1SliceDefaultPrimary {
+  /**
+   * Title field in *Section1 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Image field in *Section1 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Text field in *Section1 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * CTA Text field in *Section1 → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.cta_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_text: prismic.KeyTextField;
+
+  /**
+   * CTA Link field in *Section1 → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.cta_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_link: prismic.LinkField;
+
+  /**
+   * After CTA Text field in *Section1 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.after_cta_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  after_cta_text: prismic.RichTextField;
+
+  /**
+   * Background Image field in *Section1 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
+
+  /**
+   * Transition In Image field in *Section1 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.transition_image_1
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  transition_image_1: prismic.ImageField<never>;
+
+  /**
+   * Transition Out Image field in *Section1 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.transition_out_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  transition_out_image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Section1 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type Section1SliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<Section1SliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Section1*
+ */
+type Section1SliceVariation = Section1SliceDefault;
+
+/**
+ * Section1 Shared Slice
+ *
+ * - **API ID**: `section1`
+ * - **Description**: Section1
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type Section1Slice = prismic.SharedSlice<
+  "section1",
+  Section1SliceVariation
+>;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -192,9 +533,21 @@ declare module "@prismicio/client" {
     export type {
       HeaderDocument,
       HeaderDocumentData,
+      HomepageDocument,
+      HomepageDocumentData,
+      HomepageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
+      HeroSlice,
+      HeroSliceDefaultPrimary,
+      HeroSliceDefaultItem,
+      HeroSliceVariation,
+      HeroSliceDefault,
+      Section1Slice,
+      Section1SliceDefaultPrimary,
+      Section1SliceVariation,
+      Section1SliceDefault,
     };
   }
 }

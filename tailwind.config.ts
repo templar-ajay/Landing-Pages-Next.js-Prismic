@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["var(--body)"],
-        display: ["var(--display)"],
+        body: ["var(--font-body)"],
+        display: ["var(--font-display)"],
       },
     },
   },

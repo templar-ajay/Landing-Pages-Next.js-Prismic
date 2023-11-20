@@ -17,7 +17,9 @@
         "type": "Image",
         "config": {
           "label": "Logo",
-          "constraint": {},
+          "constraint": {
+            "width": 160
+          },
           "thumbnails": []
         }
       },
@@ -25,7 +27,10 @@
         "type": "Image",
         "config": {
           "label": "CTA Icon",
-          "constraint": {},
+          "constraint": {
+            "width": 25,
+            "height": 25
+          },
           "thumbnails": []
         }
       },

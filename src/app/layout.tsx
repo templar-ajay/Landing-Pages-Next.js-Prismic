@@ -2,23 +2,23 @@ import type { Metadata, ResolvingMetadata } from "next";
 import "./globals.css";
 import clsx from "clsx";
 
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Nunito, Nunito_Sans } from "next/font/google";
 
 import { createClient } from "@/prismicio";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
+const body = Nunito_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--body",
+  variable: "--font-body",
 });
 
-const roboto_mono = Roboto_Mono({
+const display = Nunito({
   subsets: ["latin"],
   display: "swap",
-  variable: "--display",
+  variable: "--font-display",
 });
 
 type Props = {
@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
 
   const settings = await client.getSingle("settings");
-  console.log("settings page data", settings);
+  // console.log("settings page data", settings);
 
   const {
     data: { meta_title, meta_description, og_image },
@@ -52,7 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(inter.variable, roboto_mono.variable)}>
+      <body className={clsx(body.variable, display.variable)}>
         <Header />
         {children}
         <Footer />
