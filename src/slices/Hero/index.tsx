@@ -49,13 +49,13 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   // console.log("slice", slice);
   return (
-    <div className="relative">
+    <section className="relative">
       <PrismicNextImage
         className="absolute -z-10 w-full h-full object-cover"
         field={slice.primary.background_image}
       />
       <Bounded
-        as="section"
+        as="div"
         className="md:px-[12rem]"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
@@ -104,7 +104,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           </>
         )}
       </Bounded>
-    </div>
+    </section>
   );
 };
 
