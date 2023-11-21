@@ -91,7 +91,10 @@ export type HeaderDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomepageDocumentDataSlicesSlice = Section1Slice | HeroSlice;
+type HomepageDocumentDataSlicesSlice =
+  | Section2Slice
+  | Section1Slice
+  | HeroSlice;
 
 /**
  * Content for Homepage documents
@@ -397,11 +400,11 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
- * Primary content in *Section → Primary*
+ * Primary content in *Section1 → Primary*
  */
 export interface Section1SliceDefaultPrimary {
   /**
-   * Title field in *Section → Primary*
+   * Title field in *Section1 → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -411,7 +414,7 @@ export interface Section1SliceDefaultPrimary {
   title: prismic.RichTextField;
 
   /**
-   * Image field in *Section → Primary*
+   * Image field in *Section1 → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -421,7 +424,7 @@ export interface Section1SliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Text field in *Section → Primary*
+   * Text field in *Section1 → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -431,7 +434,7 @@ export interface Section1SliceDefaultPrimary {
   text: prismic.RichTextField;
 
   /**
-   * CTA Text field in *Section → Primary*
+   * CTA Text field in *Section1 → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -441,7 +444,7 @@ export interface Section1SliceDefaultPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
-   * CTA Link field in *Section → Primary*
+   * CTA Link field in *Section1 → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -451,7 +454,7 @@ export interface Section1SliceDefaultPrimary {
   cta_link: prismic.LinkField;
 
   /**
-   * After CTA Text field in *Section → Primary*
+   * After CTA Text field in *Section1 → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -461,7 +464,7 @@ export interface Section1SliceDefaultPrimary {
   after_cta_text: prismic.RichTextField;
 
   /**
-   * Background Image field in *Section → Primary*
+   * Background Image field in *Section1 → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -471,7 +474,7 @@ export interface Section1SliceDefaultPrimary {
   background_image: prismic.ImageField<never>;
 
   /**
-   * Transition In Image field in *Section → Primary*
+   * Transition In Image field in *Section1 → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -481,7 +484,7 @@ export interface Section1SliceDefaultPrimary {
   transition_image_1: prismic.ImageField<never>;
 
   /**
-   * Transition Out Image field in *Section → Primary*
+   * Transition Out Image field in *Section1 → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -492,7 +495,7 @@ export interface Section1SliceDefaultPrimary {
 }
 
 /**
- * Default variation for Section Slice
+ * Default variation for Section1 Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -505,12 +508,12 @@ export type Section1SliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Section*
+ * Slice variation for *Section1*
  */
 type Section1SliceVariation = Section1SliceDefault;
 
 /**
- * Section Shared Slice
+ * Section1 Shared Slice
  *
  * - **API ID**: `section1`
  * - **Description**: Section1
@@ -519,6 +522,252 @@ type Section1SliceVariation = Section1SliceDefault;
 export type Section1Slice = prismic.SharedSlice<
   "section1",
   Section1SliceVariation
+>;
+
+/**
+ * Primary content in *Section2 → Primary*
+ */
+export interface Section2SliceDefaultPrimary {
+  /**
+   * Title field in *Section2 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * CTA Text field in *Section2 → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.cta_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_text: prismic.KeyTextField;
+
+  /**
+   * CTA Link field in *Section2 → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.cta_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_link: prismic.LinkField;
+
+  /**
+   * After CTA Text field in *Section2 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.after_cta_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  after_cta_text: prismic.RichTextField;
+
+  /**
+   * Background Image field in *Section2 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
+
+  /**
+   * Transition In Image field in *Section2 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.transition_in_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  transition_in_image: prismic.ImageField<never>;
+
+  /**
+   * Transition Out Image field in *Section2 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.transition_out_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  transition_out_image: prismic.ImageField<never>;
+
+  /**
+   * Key Point Icon field in *Section2 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.key_point_icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  key_point_icon: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *Section2 → Items*
+ */
+export interface Section2SliceDefaultItem {
+  /**
+   * heading field in *Section2 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.items[].heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * description field in *Section2 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.items[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Section2 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type Section2SliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<Section2SliceDefaultPrimary>,
+  Simplify<Section2SliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Section2*
+ */
+type Section2SliceVariation = Section2SliceDefault;
+
+/**
+ * Section2 Shared Slice
+ *
+ * - **API ID**: `section2`
+ * - **Description**: Section2
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type Section2Slice = prismic.SharedSlice<
+  "section2",
+  Section2SliceVariation
+>;
+
+/**
+ * Primary content in *Section3 → Items*
+ */
+export interface Section3SliceDefaultItem {
+  /**
+   * Title field in *Section3 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Paragraph field in *Section3 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * Image field in *Section3 → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * CTA Text field in *Section3 → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].cta_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_text: prismic.KeyTextField;
+
+  /**
+   * CTA Link field in *Section3 → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].cta_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_link: prismic.LinkField;
+
+  /**
+   * After CTA Text field in *Section3 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].after_cta_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  after_cta_text: prismic.RichTextField;
+
+  /**
+   * Keep Image Right field in *Section3 → Items*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: true
+   * - **API ID Path**: section3.items[].keep_image_right
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  keep_image_right: prismic.BooleanField;
+}
+
+/**
+ * Default variation for Section3 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type Section3SliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<Section3SliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Section3*
+ */
+type Section3SliceVariation = Section3SliceDefault;
+
+/**
+ * Section3 Shared Slice
+ *
+ * - **API ID**: `section3`
+ * - **Description**: Section3
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type Section3Slice = prismic.SharedSlice<
+  "section3",
+  Section3SliceVariation
 >;
 
 declare module "@prismicio/client" {
@@ -548,6 +797,15 @@ declare module "@prismicio/client" {
       Section1SliceDefaultPrimary,
       Section1SliceVariation,
       Section1SliceDefault,
+      Section2Slice,
+      Section2SliceDefaultPrimary,
+      Section2SliceDefaultItem,
+      Section2SliceVariation,
+      Section2SliceDefault,
+      Section3Slice,
+      Section3SliceDefaultItem,
+      Section3SliceVariation,
+      Section3SliceDefault,
     };
   }
 }

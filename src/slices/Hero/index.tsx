@@ -19,7 +19,7 @@ const components: JSXMapSerializer = {
   },
   heading1: ({ children }) => {
     return (
-      <Heading as="h1" size="xs" className="font-light text-center mb-4">
+      <Heading as="h1" size="xxs" className="font-light text-center mb-4">
         {children}
       </Heading>
     );
