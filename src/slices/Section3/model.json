@@ -31,14 +31,6 @@
             "multi": "paragraph,strong,em,hyperlink"
           }
         },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
         "cta_text": {
           "type": "Text",
           "config": {
@@ -64,6 +56,14 @@
             "multi": "paragraph,strong,em,hyperlink"
           }
         },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "keep_image_right": {
           "type": "Boolean",
           "config": {
@@ -71,6 +71,14 @@
             "placeholder_false": "false",
             "placeholder_true": "true",
             "default_value": true
+          }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       }

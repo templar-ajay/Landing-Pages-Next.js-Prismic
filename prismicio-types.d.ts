@@ -92,6 +92,7 @@ export type HeaderDocument<Lang extends string = string> =
   >;
 
 type HomepageDocumentDataSlicesSlice =
+  | Section3Slice
   | Section2Slice
   | Section1Slice
   | HeroSlice;
@@ -689,16 +690,6 @@ export interface Section3SliceDefaultItem {
   text: prismic.RichTextField;
 
   /**
-   * Image field in *Section3 → Items*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: section3.items[].image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
    * CTA Text field in *Section3 → Items*
    *
    * - **Field Type**: Text
@@ -729,6 +720,16 @@ export interface Section3SliceDefaultItem {
   after_cta_text: prismic.RichTextField;
 
   /**
+   * Image field in *Section3 → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
    * Keep Image Right field in *Section3 → Items*
    *
    * - **Field Type**: Boolean
@@ -738,6 +739,16 @@ export interface Section3SliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
   keep_image_right: prismic.BooleanField;
+
+  /**
+   * Background Image field in *Section3 → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].background_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
 }
 
 /**
