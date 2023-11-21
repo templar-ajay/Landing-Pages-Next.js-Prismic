@@ -22,7 +22,7 @@ export default async function Header() {
   return (
     <>
       <header
-        className="w-full absolute top-0"
+        className="w-full absolute top-0 z-10"
         style={{
           backgroundColor: background_color || "transparent",
         }}
