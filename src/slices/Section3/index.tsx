@@ -1,3 +1,4 @@
+import AfterCtaText from "@/components/AfterCtaText";
 import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
@@ -91,12 +92,7 @@ const Section3 = ({ slice }: Section3Props): JSX.Element => {
                         <Button field={cta_link}>{cta_text}</Button>
                       </div>
                     )}
-                    <div className="after-cta-div text-center">
-                      <PrismicRichText
-                        field={after_cta_text}
-                        components={components}
-                      />
-                    </div>
+                    <AfterCtaText field={after_cta_text} />
                   </div>
                 </div>
                 <div className="flex-1 min-w-[22rem]">

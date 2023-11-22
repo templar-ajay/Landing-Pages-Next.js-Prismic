@@ -1,3 +1,4 @@
+import AfterCtaText from "@/components/AfterCtaText";
 import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
@@ -102,12 +103,7 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
             {slice.primary.cta_text}
           </Button>
         </div>
-        <div className="after-cta-div text-center mt-8 mx-[12rem]">
-          <PrismicRichText
-            field={slice.primary.after_cta_text}
-            components={components}
-          />
-        </div>
+        <AfterCtaText field={slice.primary.after_cta_text} />
         {Boolean(slice.primary.transition_out_image) && (
           <>
             <div className="mt-[200px]"></div>

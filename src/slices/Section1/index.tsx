@@ -1,3 +1,4 @@
+import AfterCtaText from "@/components/AfterCtaText";
 import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
@@ -53,7 +54,6 @@ const Section1 = ({ slice }: Section1Props): JSX.Element => {
       />
       <Bounded
         as="section"
-        className="md:px-[12rem]"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
@@ -64,16 +64,16 @@ const Section1 = ({ slice }: Section1Props): JSX.Element => {
           />
         </div>
         {Boolean(slice.primary.transition_image_1) && (
-          <div className="mt-[200px]"></div>
+          <div className="mt-[70px] sm:mt-[100px] md:mt-[200px]"></div>
         )}
-        <div className="title-div mx-[5rem] mb-20">
+        <div className="title-div mx-[1rem] sm:mx-[3rem] md:mx-[5rem] mb-10 md:mb-20">
           <PrismicRichText
             field={slice.primary.title}
             components={components}
           />
         </div>
         {Boolean(slice.primary.image) && (
-          <div className="image-div -mx-20">
+          <div className="image-div md:-mx-20">
             <PrismicNextImage field={slice.primary.image} />
             {/* popup video will have to wait */}
           </div>
@@ -86,12 +86,7 @@ const Section1 = ({ slice }: Section1Props): JSX.Element => {
             {slice.primary.cta_text}
           </Button>
         </div>
-        <div className="after-cta-div text-center mx-[12rem]">
-          <PrismicRichText
-            field={slice.primary.after_cta_text}
-            components={components}
-          />
-        </div>
+        <AfterCtaText field={slice.primary.after_cta_text} />
         <div className="transition-div absolute bottom-0 left-0 w-full">
           <PrismicNextImage
             field={slice.primary.transition_out_image}
