@@ -49,14 +49,14 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   // console.log("slice", slice);
   return (
-    <section className="relative">
+    <section className="relative w-full">
       <PrismicNextImage
         className="absolute -z-10 w-full h-full object-cover"
         field={slice.primary.background_image}
       />
       <Bounded
         as="div"
-        className="md:px-[12rem]"
+        // className="md:px-[12rem]"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
@@ -70,13 +70,13 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             components={components}
           />
         </div>
-        <div className="subheader-div mx-[5rem]">
+        <div className="subheader-div mx-[2rem] md:mx-[5rem]">
           <PrismicRichText
             field={slice.primary.sub_header}
             components={components}
           />
         </div>
-        <div className="mx-[8rem]">
+        <div className="mx-[2rem] md:mx-[8rem]">
           <div className="image-div">
             <PrismicNextImage field={slice.primary.image} className="py-4" />
             {/* popup video will have to wait */}
@@ -87,9 +87,13 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             </Button>
           </div>
         </div>
-        <div className="key-points-div mt-8 flex gap-8 flex-wrap">
+        <div className="key-points-div mt-8 flex justify-center gap-8 flex-wrap">
           {slice.items.map(({ key_point_image }, index) => (
-            <PrismicNextImage key={"item-" + index} field={key_point_image} />
+            <PrismicNextImage
+              key={"item-" + index}
+              field={key_point_image}
+              className="max-w-[93px] md:max-w-[150px]"
+            />
           ))}
         </div>
         {Boolean(slice.primary.transition_image) && (
@@ -100,7 +104,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
                 className="w-full"
               />
             </div>
-            <div className="pb-[200px]"></div>
+            <div className="pb-[80px] sm:pb-[100px] md:pb-[200px]"></div>
           </>
         )}
       </Bounded>
