@@ -9,7 +9,7 @@ const components: JSXMapSerializer = {
 const AfterCtaText = (props: any) => {
   return (
     <div>
-      <div className="after-cta-div text-center mx-[12rem]">
+      <div className="after-cta-div text-center mx-[1rem]">
         <PrismicRichText {...props} components={components} />
       </div>
     </div>

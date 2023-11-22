@@ -85,8 +85,8 @@ const Section1 = ({ slice }: Section1Props): JSX.Element => {
           <Button field={slice.primary.cta_link}>
             {slice.primary.cta_text}
           </Button>
+          <AfterCtaText field={slice.primary.after_cta_text} />
         </div>
-        <AfterCtaText field={slice.primary.after_cta_text} />
         <div className="transition-div absolute bottom-0 left-0 w-full">
           <PrismicNextImage
             field={slice.primary.transition_out_image}

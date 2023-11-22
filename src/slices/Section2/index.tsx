@@ -102,8 +102,8 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
           <Button field={slice.primary.cta_link}>
             {slice.primary.cta_text}
           </Button>
+          <AfterCtaText field={slice.primary.after_cta_text} />
         </div>
-        <AfterCtaText field={slice.primary.after_cta_text} />
         {Boolean(slice.primary.transition_out_image) && (
           <>
             <div className="mt-[200px]"></div>
