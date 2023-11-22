@@ -75,8 +75,8 @@ const Section3 = ({ slice }: Section3Props): JSX.Element => {
             >
               <div
                 className={clsx(
-                  keep_image_right == true ? " " : "flex-row-reverse",
-                  "flex flex-wrap"
+                  keep_image_right == true ? " " : "flex-row-reverse ",
+                  "flex flex-wrap-reverse gap-y-8"
                 )}
               >
                 <div className="flex-1 min-w-[22rem]">
