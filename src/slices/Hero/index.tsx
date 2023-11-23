@@ -62,7 +62,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
-        <div className="pt-[8rem]"></div>
+        <div className="pt-[4rem] sm:pt-[6rem]"></div>
         <div className="bond-div uppercase">
           <PrismicRichText field={slice.primary.bond} components={components} />
         </div>
@@ -99,7 +99,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             />
           ))}
         </div>
-        {Boolean(slice.primary.transition_image) && (
+        {Boolean(slice?.primary?.transition_image?.url) && (
           <>
             <div className="transition-div absolute bottom-0 left-0 w-full">
               <PrismicNextImage

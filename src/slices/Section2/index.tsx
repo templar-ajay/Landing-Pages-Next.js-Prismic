@@ -61,7 +61,7 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
-        {Boolean(slice.primary.transition_in_image) && (
+        {Boolean(slice?.primary?.transition_in_image?.url) && (
           <>
             <div className="mt-[200px]"></div>
             <div className="transition-div absolute top-0 left-0 w-full">
@@ -107,7 +107,7 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
           </Button>
           <AfterCtaText field={slice.primary.after_cta_text} />
         </div>
-        {Boolean(slice.primary.transition_out_image) && (
+        {Boolean(slice?.primary?.transition_out_image?.url) && (
           <>
             <div className="mt-[200px]"></div>
             <div className="transition-div absolute bottom-0 left-0 w-full">

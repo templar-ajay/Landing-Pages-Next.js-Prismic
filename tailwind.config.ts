@@ -13,6 +13,9 @@ const config: Config = {
         body: ["var(--font-body)"],
         display: ["var(--font-display)"],
       },
+      screens: {
+        xs: "375px",
+      },
     },
   },
   plugins: [],

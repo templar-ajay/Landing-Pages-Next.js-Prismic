@@ -35,29 +35,33 @@ export default async function Header() {
               <PrismicNextImage
                 field={logo}
                 style={{
-                  maxHeight: "80px",
+                  // maxHeight: "80px",
                   objectFit: "contain",
                   maxWidth: "fit-content",
                 }}
+                className=" w-[120px] xs:w-[150px] sm:w-full"
               />
             </Link>
           </div>
           <PrismicNextLink field={cta_link}>
             <div className="cta h-fit">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 xs:gap-3">
                 <div className="block">
-                  <PrismicNextImage field={cta_icon} />
+                  <PrismicNextImage
+                    className="w-[25px] sm:w-[35px]"
+                    field={cta_icon}
+                  />
                 </div>
                 <div className="block">
                   <div
                     style={{ color: secondary_color || "#202020" }}
-                    className="block"
+                    className="block text-sm xs:text-md sm:text-xl"
                   >
                     {cta_message}
                   </div>
                   <div
                     style={{ color: secondary_color || "#202020" }}
-                    className="block"
+                    className="block text-md sm:text-xl"
                   >
                     {cta_phone}
                   </div>

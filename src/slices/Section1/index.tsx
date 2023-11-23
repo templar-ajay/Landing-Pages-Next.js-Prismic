@@ -60,14 +60,16 @@ const Section1 = ({ slice }: Section1Props): JSX.Element => {
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
-        <div className="transition-div absolute top-0 left-0 w-full">
-          <PrismicNextImage
-            field={slice.primary.transition_image_1}
-            className="w-full"
-          />
-        </div>
-        {Boolean(slice.primary.transition_image_1) && (
-          <div className="mt-[70px] sm:mt-[100px] md:mt-[200px]"></div>
+        {Boolean(slice?.primary?.transition_image_1?.url) && (
+          <>
+            <div className="transition-div absolute top-0 left-0 w-full">
+              <PrismicNextImage
+                field={slice.primary.transition_image_1}
+                className="w-full"
+              />
+            </div>
+            <div className="mt-[70px] sm:mt-[100px] md:mt-[200px]"></div>
+          </>
         )}
         <div className="title-div mx-[1rem] sm:mx-[3rem] md:mx-[5rem] mb-10 md:mb-20">
           <PrismicRichText
@@ -90,14 +92,16 @@ const Section1 = ({ slice }: Section1Props): JSX.Element => {
           </Button>
           <AfterCtaText field={slice.primary.after_cta_text} />
         </div>
-        <div className="transition-div absolute bottom-0 left-0 w-full">
-          <PrismicNextImage
-            field={slice.primary.transition_out_image}
-            className="w-full"
-          />
-        </div>
-        {Boolean(slice.primary.transition_out_image) && (
-          <div className="mt-[200px]"></div>
+        {Boolean(slice?.primary?.transition_out_image?.url) && (
+          <>
+            <div className="transition-div absolute bottom-0 left-0 w-full">
+              <PrismicNextImage
+                field={slice.primary.transition_out_image}
+                className="w-full"
+              />
+            </div>
+            <div className="mt-[200px]"></div>
+          </>
         )}
       </Bounded>
     </div>
