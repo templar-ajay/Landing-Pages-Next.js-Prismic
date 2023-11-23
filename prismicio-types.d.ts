@@ -410,6 +410,16 @@ export interface HeroSliceDefaultPrimary {
   cta_link: prismic.LinkField;
 
   /**
+   * After CTA Text field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.after_cta_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  after_cta_text: prismic.RichTextField;
+
+  /**
    * Background Image field in *Hero → Primary*
    *
    * - **Field Type**: Image
@@ -428,16 +438,6 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   transition_image: prismic.ImageField<never>;
-
-  /**
-   * After CTA Text field in *Hero → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.after_cta_text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  after_cta_text: prismic.RichTextField;
 }
 
 /**

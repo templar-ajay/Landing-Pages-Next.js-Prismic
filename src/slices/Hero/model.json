@@ -72,6 +72,15 @@
             "select": null
           }
         },
+        "after_cta_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "After CTA Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
         "background_image": {
           "type": "Image",
           "config": {
@@ -89,15 +98,6 @@
               "height": 200
             },
             "thumbnails": []
-          }
-        },
-        "after_cta_text": {
-          "type": "StructuredText",
-          "config": {
-            "label": "After CTA Text",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,strong,em"
           }
         }
       },
