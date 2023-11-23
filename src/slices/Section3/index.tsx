@@ -99,7 +99,7 @@ const Section3 = ({ slice }: Section3Props): JSX.Element => {
                   </div>
                 </div>
                 <div className="flex-1 min-w-[22rem]">
-                  <div className="w-full px-10 pt-5 flex items-center">
+                  <div className="w-full h-full px-10 pt-5 flex items-center justify-evenly">
                     <PrismicNextImage field={image} />
                   </div>
                 </div>

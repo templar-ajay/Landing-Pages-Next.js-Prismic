@@ -78,15 +78,15 @@ const Section1 = ({ slice }: Section1Props): JSX.Element => {
           />
         </div>
         {Boolean(slice.primary.image) && (
-          <div className="image-div md:-mx-20">
+          <div className="image-div ">
             <PrismicNextImage field={slice.primary.image} />
             {/* popup video will have to wait */}
           </div>
         )}
-        <div className="text-div mx-[12rem]">
+        <div className="text-div max-w-3xl mx-auto">
           <PrismicRichText field={slice.primary.text} components={components} />
         </div>
-        <div className="mx-[10rem]">
+        <div className="max-w-4xl mx-auto">
           <Button field={slice.primary.cta_link}>
             {slice.primary.cta_text}
           </Button>

@@ -57,7 +57,7 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
       />
       <Bounded
         as="section"
-        className="md:px-[12rem]"
+        className="max-w-5xl mx-auto"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
@@ -79,17 +79,16 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
           />
         </div>
         {/* repeatable zone elements */}
-        <div className="key-points-div mx-[10rem]">
+        <div className="key-points-div ml-[3rem] sm:ml-[6rem] md:ml-[8rem] mx-[1rem] sm:mx-[2rem] md:mx-[5rem]">
           {slice.items.map(({ heading, description }, index) => (
-            <>
-              <div className="icon-div absolute -translate-x-14">
-                <PrismicNextImage field={slice.primary.key_point_icon} />
+            <div key={"heading-" + index}>
+              <div className="icon-div absolute -translate-x-10 sm:-translate-x-14">
+                <PrismicNextImage
+                  className="max-w-[25px] sm:max-w-[40px]"
+                  field={slice.primary.key_point_icon}
+                />
               </div>
-              <PrismicRichText
-                key={"heading-" + index}
-                field={heading}
-                components={components}
-              />
+              <PrismicRichText field={heading} components={components} />
               <div className="description-div mb-8">
                 <PrismicRichText
                   key={"description" + index}
@@ -97,16 +96,16 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
                   components={components}
                 />
               </div>
-            </>
+            </div>
           ))}
+          <div className="w-full pr-[1rem] xs:pr-[2rem] sm:pr-[4rem] md:[3rem]">
+            <Button field={slice.primary.cta_link}>
+              {slice.primary.cta_text}
+            </Button>
+            <AfterCtaText field={slice.primary.after_cta_text} />
+          </div>
         </div>
-        {/*  */}
-        <div className="mx-[10rem]">
-          <Button field={slice.primary.cta_link}>
-            {slice.primary.cta_text}
-          </Button>
-          <AfterCtaText field={slice.primary.after_cta_text} />
-        </div>
+
         {Boolean(slice?.primary?.transition_out_image?.url) && (
           <>
             <div className="mt-[200px]"></div>
