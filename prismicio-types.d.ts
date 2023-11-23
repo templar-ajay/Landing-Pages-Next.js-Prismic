@@ -172,6 +172,76 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
+type LandingPageDocumentDataSlicesSlice =
+  | Section2Slice
+  | Section3Slice
+  | Section1Slice
+  | ReviewsSlice
+  | HeroSlice;
+
+/**
+ * Content for Landing Page documents
+ */
+interface LandingPageDocumentData {
+  /**
+   * Slice Zone field in *Landing Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: landing_page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<LandingPageDocumentDataSlicesSlice> /**
+   * Meta Title field in *Landing Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: landing_page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Landing Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: landing_page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Landing Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: landing_page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Landing Page document from Prismic
+ *
+ * - **API ID**: `landing_page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LandingPageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<LandingPageDocumentData>,
+    "landing_page",
+    Lang
+  >;
+
 /**
  * Content for Settings documents
  */
@@ -262,6 +332,7 @@ export type SettingsDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | HeaderDocument
   | HomepageDocument
+  | LandingPageDocument
   | SettingsDocument;
 
 /**
@@ -897,6 +968,9 @@ declare module "@prismicio/client" {
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
+      LandingPageDocument,
+      LandingPageDocumentData,
+      LandingPageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
