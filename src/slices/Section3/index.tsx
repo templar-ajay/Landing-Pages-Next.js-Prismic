@@ -2,6 +2,7 @@ import AfterCtaText from "@/components/AfterCtaText";
 import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
+import Paragraph from "@/components/Paragraph";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import {
@@ -34,7 +35,9 @@ const components: JSXMapSerializer = {
     );
   },
   paragraph: ({ children }) => (
-    <p className="text-lg md:text-xl text-black-500 my-8">{children}</p>
+    <Paragraph className="text-lg md:text-xl text-black-500 my-8">
+      {children}
+    </Paragraph>
   ),
 };
 

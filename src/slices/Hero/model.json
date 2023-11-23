@@ -90,6 +90,15 @@
             },
             "thumbnails": []
           }
+        },
+        "after_cta_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "After CTA Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
         }
       },
       "items": {

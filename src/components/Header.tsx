@@ -6,6 +6,8 @@ export default async function Header() {
   const client = createClient();
 
   const header = await client.getSingle("header");
+  const settings = await client.getSingle("settings");
+  const { secondary_color } = settings.data;
   // console.log("header", header);
 
   const {
@@ -32,7 +34,6 @@ export default async function Header() {
             <Link href="/">
               <PrismicNextImage
                 field={logo}
-                width={100}
                 style={{
                   maxHeight: "80px",
                   objectFit: "contain",
@@ -48,8 +49,18 @@ export default async function Header() {
                   <PrismicNextImage field={cta_icon} />
                 </div>
                 <div className="block">
-                  <div className="block">{cta_message}</div>
-                  <div className="block">{cta_phone}</div>
+                  <div
+                    style={{ color: secondary_color || "#202020" }}
+                    className="block"
+                  >
+                    {cta_message}
+                  </div>
+                  <div
+                    style={{ color: secondary_color || "#202020" }}
+                    className="block"
+                  >
+                    {cta_phone}
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,3 +1,4 @@
+import { createClient } from "@/prismicio";
 import clsx from "clsx";
 
 type HeadingProps = {
@@ -6,12 +7,16 @@ type HeadingProps = {
   children: React.ReactNode;
   className: string;
 };
-export default function Heading({
+
+export default async function Heading({
   as: Comp = "h1",
   size = "lg",
   children,
   className,
 }: HeadingProps) {
+  const client = createClient();
+  const settings = await client.getSingle("settings");
+  const { primary_color } = settings.data;
   return (
     <Comp
       className={clsx(
@@ -24,6 +29,7 @@ export default function Heading({
         size === "xxs" && "text-md md:text-xl",
         className
       )}
+      style={{ color: primary_color || "#000000" }}
     >
       {children}
     </Comp>

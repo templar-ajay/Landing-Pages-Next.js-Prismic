@@ -46,11 +46,16 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const client = createClient();
+  const settings = await client.getSingle("settings");
+  const {
+    data: { primary_color, secondary_color },
+  } = settings;
   return (
     <html lang="en">
       <body className={clsx(body.variable, display.variable)}>

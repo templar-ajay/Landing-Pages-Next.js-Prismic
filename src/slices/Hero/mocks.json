@@ -126,7 +126,6 @@
 				"thumbnails": {}
 			},
 			"transition_image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
@@ -144,7 +143,21 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"after_cta_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Officia esse cillum cupidatat Lorem aliquip dolore cillum aliqua pariatur nostrud minim elit. Sunt pariatur consectetur enim qui non pariatur esse non cillum quis. Officia eu nostrud qui velit elit ipsum laborum."
+						}
+					}
+				]
 			}
 		},
 		"items": [

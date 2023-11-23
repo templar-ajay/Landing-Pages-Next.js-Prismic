@@ -1,8 +1,9 @@
 import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
+import Paragraph from "./Paragraph";
 
 const components: JSXMapSerializer = {
   paragraph: ({ children }) => (
-    <p className="text-md md:text-lg text-black-500 mt-4 mb-10">{children}</p>
+    <Paragraph className="text-sm text-black-500 mb-10">{children}</Paragraph>
   ),
 };
 

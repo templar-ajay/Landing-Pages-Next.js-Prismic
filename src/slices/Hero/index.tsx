@@ -1,6 +1,8 @@
+import AfterCtaText from "@/components/AfterCtaText";
 import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
+import Paragraph from "@/components/Paragraph";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import {
@@ -32,9 +34,9 @@ const components: JSXMapSerializer = {
     );
   },
   paragraph: ({ children }) => (
-    <p className="text-center text-lg md:text-xl text-black-500 mt-8 mb-10">
+    <Paragraph className="text-center text-lg md:text-xl text-black-500 mt-8 mb-10">
       {children}
-    </p>
+    </Paragraph>
   ),
 };
 
@@ -85,6 +87,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             <Button field={slice.primary.cta_link} className="">
               {slice.primary.cta_text}
             </Button>
+            <AfterCtaText field={slice.primary.after_cta_text} />
           </div>
         </div>
         <div className="key-points-div mt-8 flex justify-center gap-8 flex-wrap">
