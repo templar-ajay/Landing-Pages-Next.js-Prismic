@@ -9,18 +9,30 @@ import Heading from "../Heading";
 import Paragraph from "../Paragraph";
 
 const components: JSXMapSerializer = {
+  // we are not using them because the carousel breaks when we use them.
+  // nothing to do this the createClient in Heading component.
+  // yeah it's strange
+
+  // heading4: ({ children }) => {
+  //   return (
+  //     <Heading as="h4" size="sm" className="font-body mb-0">
+  //       {children}
+  //     </Heading>
+  //   );
+  // },
+  // paragraph: ({ children }) => (
+  //   <Paragraph className="text-lg md:text-xl text-black-500 mt-0 mb-10">
+  //     {children}
+  //   </Paragraph>
+  // ),
   heading4: ({ children }) => {
     return (
-      <Heading as="h4" size="sm" className="font-body mb-0">
-        {children}
-      </Heading>
+      <h4 className="mb-0 text-xl sm:text-2xl md:text-3xl ">{children}</h4>
     );
   },
-  paragraph: ({ children }) => (
-    <Paragraph className="text-lg md:text-xl text-black-500 mt-0 mb-10">
-      {children}
-    </Paragraph>
-  ),
+  paragraph: ({ children }) => {
+    return <p className="text-md md:text-lg">{children}</p>;
+  },
 };
 export default function BootstrapCarousel({ items }: any) {
   const [index, setIndex] = useState(0);
@@ -30,11 +42,13 @@ export default function BootstrapCarousel({ items }: any) {
   };
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
-      {items.map(({ testimonial, name }: any, index: number) => (
-        <Carousel.Item key={index} className={styles.itemP} interval={4000}>
+      {items.map(({ testimonial, name }: any, i: number) => (
+        <Carousel.Item key={i} className={styles.itemP} interval={4000}>
           {/* <img src={item.imageUrl} alt="slides" /> */}
           <Carousel.Caption className={styles.caption}>
-            <PrismicRichText field={testimonial} components={components} />
+            <div className="mb-8">
+              <PrismicRichText field={testimonial} components={components} />
+            </div>
             <PrismicRichText field={name} components={components} />
           </Carousel.Caption>
         </Carousel.Item>
