@@ -1,6 +1,6 @@
 "use client";
 import Bounded from "@/components/Bounded";
-import BootstrapCarousel from "@/components/Carousel/BootstrapCarousel";
+import BootstrapCarousel from "@/components/BootstrapCarousel/BootstrapCarousel";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import { Content } from "@prismicio/client";
@@ -10,9 +10,8 @@ import {
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react";
-import clsx from "clsx";
 
-import React, { MouseEventHandler, ReactElement, useState } from "react";
+import React, { useState } from "react";
 
 const components: JSXMapSerializer = {
   heading2: ({ children }) => {

@@ -1,12 +1,9 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./Bootstrap.module.css";
-import { PrismicNextImage } from "@prismicio/next";
 import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
-import Heading from "../Heading";
-import Paragraph from "../Paragraph";
 
 const components: JSXMapSerializer = {
   // we are not using them because the carousel breaks when we use them.
