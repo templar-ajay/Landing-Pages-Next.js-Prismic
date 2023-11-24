@@ -26,7 +26,7 @@ export default async function Heading({
         size === "md" && "text-2xl sm:text-3xl md:text-4xl",
         size === "sm" && "text-xl sm:text-2xl md:text-3xl",
         size === "xs" && "text-lg sm:text-xl md:text-2xl",
-        size === "xxs" && "text-md md:text-xl",
+        size === "xxs" && "text-sm sm:text-md md:text-xl",
         className
       )}
       style={{ color: primary_color || "#000000" }}

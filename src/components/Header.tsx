@@ -29,7 +29,7 @@ export default async function Header() {
           backgroundColor: background_color || "transparent",
         }}
       >
-        <div className="flex justify-between items-center px-5 py-3 mx-auto max-w-[1124px]">
+        <div className="flex justify-between items-center px-3 sm:px-5 py-3 mx-auto max-w-[1124px]">
           <div className="logo h-fit">
             <Link href="/">
               <PrismicNextImage
