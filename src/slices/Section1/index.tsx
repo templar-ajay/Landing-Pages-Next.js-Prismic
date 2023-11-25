@@ -86,7 +86,7 @@ const Section1 = ({ slice }: Section1Props): JSX.Element => {
         <div className="text-div max-w-3xl mx-auto">
           <PrismicRichText field={slice.primary.text} components={components} />
         </div>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-xl mx-auto">
           <Button field={slice.primary.cta_link}>
             {slice.primary.cta_text}
           </Button>

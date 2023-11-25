@@ -3,6 +3,7 @@ import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
+import { createClient } from "@/prismicio";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import {
@@ -49,7 +50,10 @@ export type Section3Props = SliceComponentProps<Content.Section3Slice>;
 /**
  * Component for "Section3" Slices.
  */
-const Section3 = ({ slice }: Section3Props): JSX.Element => {
+const Section3 = async ({ slice }: Section3Props): JSX.Element => {
+  const client = createClient();
+  const settings = await client.getSingle("settings");
+  const { primary_color } = settings.data;
   return (
     <section>
       {slice.items.map(
@@ -83,10 +87,14 @@ const Section3 = ({ slice }: Section3Props): JSX.Element => {
                 )}
               >
                 <div className="flex-1 min-w-[22rem]">
-                  <div className="px-10">
+                  <div className="px-0 sm:px-10">
                     <div className="title-div mb-5">
                       <PrismicRichText field={title} components={components} />
                     </div>
+                    <hr
+                      className="w-32 h-1 mx-auto my-4 border-0 rounded md:my-10"
+                      style={{ backgroundColor: primary_color || "grey" }}
+                    ></hr>
                     <div className="text-div">
                       <PrismicRichText field={text} components={components} />
                     </div>
@@ -99,7 +107,7 @@ const Section3 = ({ slice }: Section3Props): JSX.Element => {
                   </div>
                 </div>
                 <div className="flex-1 min-w-[22rem]">
-                  <div className="w-full h-full px-10 pt-5 flex items-center justify-evenly">
+                  <div className="w-full h-full px-0 mobile:px-10 pt-5 flex items-center justify-evenly">
                     <PrismicNextImage field={image} />
                   </div>
                 </div>

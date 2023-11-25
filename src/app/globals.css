@@ -15,3 +15,17 @@ body {
 a {
     text-decoration: none !important;
 }
+
+ul {
+    list-style: none;
+}
+
+ul>li::before {
+    content: '\2713';
+    margin-right: 0.5em;
+    padding: 0.5px 4px;
+    padding-top: 2.25px;
+    background-color: green;
+    border-radius: 50px;
+    color: white;
+}

@@ -72,18 +72,18 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             components={components}
           />
         </div>
-        <div className="subheader-div mx-[2rem] md:mx-[5rem]">
+        <div className="subheader-div mx-[0rem] mobile:mx-[2rem] md:mx-[5rem]">
           <PrismicRichText
             field={slice.primary.sub_header}
             components={components}
           />
         </div>
-        <div className="mx-[2rem] md:mx-[8rem]">
+        <div className="mx-[0rem] mobile:mx-[2rem] md:mx-[8rem]">
           <div className="image-div">
             <PrismicNextImage field={slice.primary.image} className="py-4" />
             {/* popup video will have to wait */}
           </div>
-          <div className="cta-div">
+          <div className="cta-div mx-auto max-w-xl ">
             <Button field={slice.primary.cta_link} className="">
               {slice.primary.cta_text}
             </Button>

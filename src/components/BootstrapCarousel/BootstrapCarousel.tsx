@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./Bootstrap-minimum.css";
 import styles from "./Bootstrap.module.css";
 import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
 
