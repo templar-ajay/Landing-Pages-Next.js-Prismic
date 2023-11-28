@@ -52,7 +52,10 @@ export default function KeepMountedModal() {
 
   return (
     <div className="absolute w-full h-full">
-      <Button onClick={handleOpen} className="absolute w-full h-full "></Button>
+      <div
+        onClick={handleOpen}
+        className="cursor-pointer absolute w-full h-full"
+      ></div>
       <Modal
         keepMounted
         open={open}
