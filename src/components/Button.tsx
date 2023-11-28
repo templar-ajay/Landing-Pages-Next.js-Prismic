@@ -7,7 +7,8 @@ export default async function Button({
   className,
   ...restProps
 }: PrismicNextLinkProps) {
-  const settings = await createClient().getSingle("settings");
+  const client = createClient();
+  const settings = await client.getSingle("settings");
   const { cta_background_color, cta_text_color } = settings.data;
   return (
     <div className="relative">
@@ -18,7 +19,7 @@ export default async function Button({
           className
         )}
         style={{
-          color: cta_text_color || "rgb(250,204,21)",
+          color: cta_text_color || "rgb(250,255,255)",
           backgroundColor: cta_background_color || "rgb(234,179,8)",
         }}
         {...restProps}
