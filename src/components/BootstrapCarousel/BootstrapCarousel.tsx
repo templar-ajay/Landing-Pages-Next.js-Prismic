@@ -5,7 +5,9 @@ import "./Bootstrap-minimum.css";
 import styles from "./Bootstrap.module.css";
 import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
 
-const components: JSXMapSerializer = {
+type componentsType = ({}: any) => JSXMapSerializer;
+
+const components: componentsType = ({ color }) => {
   // we are not using them because the carousel breaks when we use them.
   // nothing to do this the createClient in Heading component.
   // yeah it's strange
@@ -22,16 +24,28 @@ const components: JSXMapSerializer = {
   //     {children}
   //   </Paragraph>
   // ),
-  heading4: ({ children }) => {
-    return (
-      <h4 className="mb-0 text-xl sm:text-2xl md:text-3xl ">{children}</h4>
-    );
-  },
-  paragraph: ({ children }) => {
-    return <p className="text-md md:text-lg">{children}</p>;
-  },
+  return {
+    heading4: ({ children }) => {
+      return (
+        <h4
+          className="mb-0 text-xl sm:text-2xl md:text-3xl "
+          style={{ color: color }}
+        >
+          {children}
+        </h4>
+      );
+    },
+    paragraph: ({ children }) => {
+      return (
+        <p className="text-md md:text-lg" style={{ color: color }}>
+          {children}
+        </p>
+      );
+    },
+  };
 };
-export default function BootstrapCarousel({ items }: any) {
+
+export default function BootstrapCarousel({ items, color }: any) {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex: any, e: any) => {
@@ -44,9 +58,15 @@ export default function BootstrapCarousel({ items }: any) {
           {/* <img src={item.imageUrl} alt="slides" /> */}
           <Carousel.Caption className={styles.caption}>
             <div className="mb-8">
-              <PrismicRichText field={testimonial} components={components} />
+              <PrismicRichText
+                field={testimonial}
+                components={components({ color: color })}
+              />
             </div>
-            <PrismicRichText field={name} components={components} />
+            <PrismicRichText
+              field={name}
+              components={components({ color: color })}
+            />
           </Carousel.Caption>
         </Carousel.Item>
       ))}

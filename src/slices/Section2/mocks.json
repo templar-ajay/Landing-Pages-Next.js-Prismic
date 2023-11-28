@@ -117,7 +117,6 @@
 				]
 			},
 			"key_point_icon": {
-				"__TYPE__": "ImageContent",
 				"url": "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxmcnVpdHxlbnwwfHx8fDE3MDA0NjU5NDd8MA&ixlib=rb-4.0.3&q=85&rect=0%2C1434%2C7173%2C7173&w=40&h=40",
 				"alt": "red strawberry fruit with white background",
 				"origin": {
@@ -136,7 +135,19 @@
 						"y": 1434
 					}
 				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"title_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#8a15d2",
+				"type": "Color"
+			},
+			"text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#a23723",
+				"type": "Color"
 			}
 		},
 		"items": [

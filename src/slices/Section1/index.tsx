@@ -11,33 +11,55 @@ import {
   SliceComponentProps,
 } from "@prismicio/react";
 
-const components: JSXMapSerializer = {
-  heading2: ({ children }) => {
-    return (
-      <Heading as="h2" size="lg" className="font-semibold text-center mb-4">
+type componentsType = ({}: any) => JSXMapSerializer;
+
+const components: componentsType = ({ title_color, text_color }) => {
+  return {
+    heading2: ({ children }) => {
+      return (
+        <Heading
+          as="h2"
+          size="lg"
+          className="font-semibold text-center mb-4"
+          color={title_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    heading1: ({ children }) => {
+      return (
+        <Heading
+          as="h1"
+          size="xs"
+          className="font-light text-center mb-4"
+          color={title_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    heading3: ({ children }) => {
+      return (
+        <Heading
+          as="h3"
+          size="sm"
+          className="font-body text-center mb-4"
+          color={title_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    paragraph: ({ children }) => (
+      <Paragraph
+        className="text-lg md:text-xl text-black-500 mt-8 mb-10"
+        color={text_color}
+      >
         {children}
-      </Heading>
-    );
-  },
-  heading1: ({ children }) => {
-    return (
-      <Heading as="h1" size="xs" className="font-light text-center mb-4">
-        {children}
-      </Heading>
-    );
-  },
-  heading3: ({ children }) => {
-    return (
-      <Heading as="h3" size="sm" className="font-body text-center mb-4">
-        {children}
-      </Heading>
-    );
-  },
-  paragraph: ({ children }) => (
-    <Paragraph className="text-lg md:text-xl text-black-500 mt-8 mb-10">
-      {children}
-    </Paragraph>
-  ),
+      </Paragraph>
+    ),
+  };
 };
 
 /**
@@ -74,7 +96,10 @@ const Section1 = ({ slice }: Section1Props): JSX.Element => {
         <div className="title-div mx-[1rem] sm:mx-[3rem] md:mx-[5rem] mb-10 md:mb-20">
           <PrismicRichText
             field={slice.primary.title}
-            components={components}
+            components={components({
+              title_color: slice.primary.title_color,
+              text_color: slice.primary.text_color,
+            })}
           />
         </div>
         {Boolean(slice.primary.image) && (
@@ -84,13 +109,22 @@ const Section1 = ({ slice }: Section1Props): JSX.Element => {
           </div>
         )}
         <div className="text-div max-w-3xl mx-auto">
-          <PrismicRichText field={slice.primary.text} components={components} />
+          <PrismicRichText
+            field={slice.primary.text}
+            components={components({
+              title_color: slice.primary.title_color,
+              text_color: slice.primary.text_color,
+            })}
+          />
         </div>
         <div className="max-w-xl mx-auto">
           <Button field={slice.primary.cta_link}>
             {slice.primary.cta_text}
           </Button>
-          <AfterCtaText field={slice.primary.after_cta_text} />
+          <AfterCtaText
+            field={slice.primary.after_cta_text}
+            color={slice.primary.text_color}
+          />
         </div>
         {Boolean(slice?.primary?.transition_out_image?.url) && (
           <>

@@ -73,6 +73,17 @@ interface HeaderDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
+
+  /**
+   * CTA Text Color field in *Header*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.cta_text_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_text_color: prismic.ColorField;
 }
 
 /**
@@ -269,6 +280,28 @@ interface SettingsDocumentData {
   secondary_color: prismic.ColorField;
 
   /**
+   * CTA Text Color field in *Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.cta_text_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_text_color: prismic.ColorField;
+
+  /**
+   * CTA Background Color field in *Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.cta_background_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_background_color: prismic.ColorField;
+
+  /**
    * Favicon field in *Settings*
    *
    * - **Field Type**: Image
@@ -350,6 +383,16 @@ export interface HeroSliceDefaultPrimary {
   bond: prismic.RichTextField;
 
   /**
+   * Bond Color field in *Hero → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.bond_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  bond_color: prismic.ColorField;
+
+  /**
    * Header field in *Hero → Primary*
    *
    * - **Field Type**: Rich Text
@@ -360,6 +403,16 @@ export interface HeroSliceDefaultPrimary {
   header: prismic.RichTextField;
 
   /**
+   * Header Color field in *Hero → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.header_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  header_color: prismic.ColorField;
+
+  /**
    * Sub Header field in *Hero → Primary*
    *
    * - **Field Type**: Rich Text
@@ -368,6 +421,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   sub_header: prismic.RichTextField;
+
+  /**
+   * Sub Header Color field in *Hero → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.sub_header_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  sub_header_color: prismic.ColorField;
 
   /**
    * Image field in *Hero → Primary*
@@ -497,6 +560,16 @@ export interface ReviewsSliceDefaultPrimary {
   title: prismic.RichTextField;
 
   /**
+   * Title Color field in *Reviews → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: reviews.primary.title_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  title_color: prismic.ColorField;
+
+  /**
    * Image field in *Reviews → Primary*
    *
    * - **Field Type**: Image
@@ -515,6 +588,16 @@ export interface ReviewsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   background_image: prismic.ImageField<never>;
+
+  /**
+   * Testimonial Color field in *Reviews → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: reviews.primary.testimonial_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  testimonial_color: prismic.ColorField;
 }
 
 /**
@@ -587,6 +670,16 @@ export interface Section1SliceDefaultPrimary {
   title: prismic.RichTextField;
 
   /**
+   * Title Color field in *Section1 → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.title_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  title_color: prismic.ColorField;
+
+  /**
    * Image field in *Section1 → Primary*
    *
    * - **Field Type**: Image
@@ -605,6 +698,16 @@ export interface Section1SliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   text: prismic.RichTextField;
+
+  /**
+   * Text Color field in *Section1 → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  text_color: prismic.ColorField;
 
   /**
    * CTA Text field in *Section1 → Primary*
@@ -712,6 +815,16 @@ export interface Section2SliceDefaultPrimary {
   title: prismic.RichTextField;
 
   /**
+   * Title Color field in *Section2 → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.title_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  title_color: prismic.ColorField;
+
+  /**
    * CTA Text field in *Section2 → Primary*
    *
    * - **Field Type**: Text
@@ -780,6 +893,16 @@ export interface Section2SliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   key_point_icon: prismic.ImageField<never>;
+
+  /**
+   * Key Points Text Color field in *Section2 → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  text_color: prismic.ColorField;
 }
 
 /**
@@ -852,6 +975,16 @@ export interface Section3SliceDefaultItem {
   title: prismic.RichTextField;
 
   /**
+   * Title Color field in *Section3 → Items*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].title_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  title_color: prismic.ColorField;
+
+  /**
    * Paragraph field in *Section3 → Items*
    *
    * - **Field Type**: Rich Text
@@ -860,6 +993,16 @@ export interface Section3SliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   text: prismic.RichTextField;
+
+  /**
+   * Paragraph Color field in *Section3 → Items*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].paragraph_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  paragraph_color: prismic.ColorField;
 
   /**
    * CTA Text field in *Section3 → Items*

@@ -132,6 +132,22 @@
 								"target": null
 							}
 						}
+					],
+					[
+						"title_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#cf3c71",
+							"type": "Color"
+						}
+					],
+					[
+						"paragraph_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#225b83",
+							"type": "Color"
+						}
 					]
 				]
 			},
@@ -263,6 +279,22 @@
 							"credits": null,
 							"__TYPE__": "ImageContent",
 							"thumbnails": {}
+						}
+					],
+					[
+						"title_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#c4c942",
+							"type": "Color"
+						}
+					],
+					[
+						"paragraph_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#87eb53",
+							"type": "Color"
 						}
 					]
 				]

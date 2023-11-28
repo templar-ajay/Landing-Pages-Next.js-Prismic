@@ -21,6 +21,13 @@
             "single": "heading2,strong"
           }
         },
+        "title_color": {
+          "type": "Color",
+          "config": {
+            "label": "Title Color",
+            "placeholder": ""
+          }
+        },
         "cta_text": {
           "type": "Text",
           "config": {
@@ -84,6 +91,13 @@
               "height": 40
             },
             "thumbnails": []
+          }
+        },
+        "text_color": {
+          "type": "Color",
+          "config": {
+            "label": "Key Points Text Color",
+            "placeholder": ""
           }
         }
       },

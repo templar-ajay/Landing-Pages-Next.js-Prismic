@@ -10,34 +10,55 @@ import {
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react";
+type componentsType = ({}: any) => JSXMapSerializer;
 
-const components: JSXMapSerializer = {
-  heading2: ({ children }) => {
-    return (
-      <Heading as="h2" size="lg" className="font-semibold text-center mb-4">
+const components: componentsType = ({ title_color, text_color }) => {
+  return {
+    heading2: ({ children }) => {
+      return (
+        <Heading
+          as="h2"
+          size="lg"
+          className="font-semibold text-center mb-4"
+          color={title_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    heading1: ({ children }) => {
+      return (
+        <Heading
+          as="h1"
+          size="xs"
+          className="font-light text-center mb-4"
+          color={title_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    heading3: ({ children }) => {
+      return (
+        <Heading
+          as="h3"
+          size="xs"
+          className="font-body mb-2"
+          color={title_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    paragraph: ({ children }) => (
+      <Paragraph
+        className="text-lg md:text-xl text-black-500 mt-2 mb-10"
+        color={text_color}
+      >
         {children}
-      </Heading>
-    );
-  },
-  heading1: ({ children }) => {
-    return (
-      <Heading as="h1" size="xs" className="font-light text-center mb-4">
-        {children}
-      </Heading>
-    );
-  },
-  heading3: ({ children }) => {
-    return (
-      <Heading as="h3" size="xs" className="font-body mb-2">
-        {children}
-      </Heading>
-    );
-  },
-  paragraph: ({ children }) => (
-    <Paragraph className="text-lg md:text-xl text-black-500 mt-2 mb-10">
-      {children}
-    </Paragraph>
-  ),
+      </Paragraph>
+    ),
+  };
 };
 
 /**
@@ -75,7 +96,10 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
         <div className="title-div mb-[4rem]">
           <PrismicRichText
             field={slice.primary.title}
-            components={components}
+            components={components({
+              title_color: slice.primary.title_color,
+              text_color: slice.primary.text_color,
+            })}
           />
         </div>
         {/* repeatable zone elements */}
@@ -88,12 +112,21 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
                   field={slice.primary.key_point_icon}
                 />
               </div>
-              <PrismicRichText field={heading} components={components} />
+              <PrismicRichText
+                field={heading}
+                components={components({
+                  title_color: slice.primary.title_color,
+                  text_color: slice.primary.text_color,
+                })}
+              />
               <div className="description-div mb-8">
                 <PrismicRichText
                   key={"description" + index}
                   field={description}
-                  components={components}
+                  components={components({
+                    title_color: slice.primary.title_color,
+                    text_color: slice.primary.text_color,
+                  })}
                 />
               </div>
             </div>
@@ -102,7 +135,10 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
             <Button field={slice.primary.cta_link}>
               {slice.primary.cta_text}
             </Button>
-            <AfterCtaText field={slice.primary.after_cta_text} />
+            <AfterCtaText
+              field={slice.primary.after_cta_text}
+              color={slice.primary.text_color}
+            />
           </div>
         </div>
 

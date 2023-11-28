@@ -158,6 +158,21 @@
 						}
 					}
 				]
+			},
+			"header_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#4e55ed",
+				"type": "Color"
+			},
+			"sub_header_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#441433",
+				"type": "Color"
+			},
+			"bond_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#d7f9ff",
+				"type": "Color"
 			}
 		},
 		"items": [

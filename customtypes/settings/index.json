@@ -20,6 +20,20 @@
           "placeholder": ""
         }
       },
+      "cta_text_color": {
+        "type": "Color",
+        "config": {
+          "label": "CTA Text Color",
+          "placeholder": ""
+        }
+      },
+      "cta_background_color": {
+        "type": "Color",
+        "config": {
+          "label": "CTA Background Color",
+          "placeholder": ""
+        }
+      },
       "favicon": {
         "type": "Image",
         "config": {

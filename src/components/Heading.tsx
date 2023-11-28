@@ -6,6 +6,7 @@ type HeadingProps = {
   size?: "xl" | "lg" | "md" | "sm" | "xs" | "xxs";
   children: React.ReactNode;
   className: string;
+  color: string;
 };
 
 export default async function Heading({
@@ -13,6 +14,7 @@ export default async function Heading({
   size = "lg",
   children,
   className,
+  color,
 }: HeadingProps) {
   const client = createClient();
   const settings = await client.getSingle("settings");
@@ -29,7 +31,7 @@ export default async function Heading({
         size === "xxs" && "text-sm sm:text-md md:text-xl",
         className
       )}
-      style={{ color: primary_color || "#000000" }}
+      style={{ color: color || primary_color || "#000000" }}
     >
       {children}
     </Comp>

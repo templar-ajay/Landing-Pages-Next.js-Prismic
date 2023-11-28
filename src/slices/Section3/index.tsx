@@ -12,34 +12,55 @@ import {
   SliceComponentProps,
 } from "@prismicio/react";
 import clsx from "clsx";
+type componentsType = ({}: any) => JSXMapSerializer;
 
-const components: JSXMapSerializer = {
-  heading2: ({ children }) => {
-    return (
-      <Heading as="h2" size="lg" className="font-semibold text-center mb-4">
+const components: componentsType = ({ title_color, paragraph_color }) => {
+  return {
+    heading2: ({ children }) => {
+      return (
+        <Heading
+          as="h2"
+          size="lg"
+          className="font-semibold text-center mb-4"
+          color={title_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    heading1: ({ children }) => {
+      return (
+        <Heading
+          as="h1"
+          size="xs"
+          className="font-light text-center mb-4"
+          color={title_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    heading3: ({ children }) => {
+      return (
+        <Heading
+          as="h3"
+          size="md"
+          className="font-body mb-4"
+          color={title_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    paragraph: ({ children }) => (
+      <Paragraph
+        className="text-lg md:text-xl text-black-500 my-8"
+        color={paragraph_color}
+      >
         {children}
-      </Heading>
-    );
-  },
-  heading1: ({ children }) => {
-    return (
-      <Heading as="h1" size="xs" className="font-light text-center mb-4">
-        {children}
-      </Heading>
-    );
-  },
-  heading3: ({ children }) => {
-    return (
-      <Heading as="h3" size="md" className="font-body mb-4">
-        {children}
-      </Heading>
-    );
-  },
-  paragraph: ({ children }) => (
-    <Paragraph className="text-lg md:text-xl text-black-500 my-8">
-      {children}
-    </Paragraph>
-  ),
+      </Paragraph>
+    ),
+  };
 };
 
 /**
@@ -50,7 +71,7 @@ export type Section3Props = SliceComponentProps<Content.Section3Slice>;
 /**
  * Component for "Section3" Slices.
  */
-const Section3 = async ({ slice }: Section3Props): JSX.Element => {
+const Section3 = async ({ slice }: Section3Props): Promise<JSX.Element> => {
   const client = createClient();
   const settings = await client.getSingle("settings");
   const { primary_color } = settings.data;
@@ -67,6 +88,8 @@ const Section3 = async ({ slice }: Section3Props): JSX.Element => {
             cta_text,
             cta_link,
             after_cta_text,
+            title_color,
+            paragraph_color,
           },
           index
         ) => (
@@ -89,21 +112,36 @@ const Section3 = async ({ slice }: Section3Props): JSX.Element => {
                 <div className="flex-1 min-w-[22rem]">
                   <div className="px-0 sm:px-10">
                     <div className="title-div mb-5">
-                      <PrismicRichText field={title} components={components} />
+                      <PrismicRichText
+                        field={title}
+                        components={components({
+                          title_color: title_color,
+                          paragraph_color: paragraph_color,
+                        })}
+                      />
                     </div>
                     <hr
                       className="w-32 h-1 mx-auto my-4 border-0 rounded md:my-10"
                       style={{ backgroundColor: primary_color || "grey" }}
                     ></hr>
                     <div className="text-div">
-                      <PrismicRichText field={text} components={components} />
+                      <PrismicRichText
+                        field={text}
+                        components={components({
+                          title_color: title_color,
+                          paragraph_color: paragraph_color,
+                        })}
+                      />
                     </div>
                     {Boolean(cta_text) && (
                       <div className="cta-div">
                         <Button field={cta_link}>{cta_text}</Button>
                       </div>
                     )}
-                    <AfterCtaText field={after_cta_text} />
+                    <AfterCtaText
+                      field={after_cta_text}
+                      color={paragraph_color}
+                    />
                   </div>
                 </div>
                 <div className="flex-1 min-w-[22rem]">

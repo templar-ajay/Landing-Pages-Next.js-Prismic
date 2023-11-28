@@ -21,6 +21,13 @@
             "single": "heading2,em,strong"
           }
         },
+        "title_color": {
+          "type": "Color",
+          "config": {
+            "label": "Title Color",
+            "placeholder": ""
+          }
+        },
         "image": {
           "type": "Image",
           "config": {
@@ -39,6 +46,13 @@
             "placeholder": "",
             "allowTargetBlank": true,
             "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+          }
+        },
+        "text_color": {
+          "type": "Color",
+          "config": {
+            "label": "Text Color",
+            "placeholder": ""
           }
         },
         "cta_text": {

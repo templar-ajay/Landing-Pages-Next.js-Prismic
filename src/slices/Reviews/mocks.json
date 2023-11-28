@@ -107,6 +107,16 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"title_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#c6aab5",
+				"type": "Color"
+			},
+			"testimonial_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#3942c7",
+				"type": "Color"
 			}
 		},
 		"items": [

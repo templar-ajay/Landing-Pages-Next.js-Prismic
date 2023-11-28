@@ -55,6 +55,13 @@
           "placeholder": "",
           "select": null
         }
+      },
+      "cta_text_color": {
+        "type": "Color",
+        "config": {
+          "label": "CTA Text Color",
+          "placeholder": ""
+        }
       }
     }
   }

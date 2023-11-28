@@ -18,6 +18,7 @@ export default async function Header() {
       cta_message,
       cta_phone,
       cta_link,
+      cta_text_color,
     },
   } = header;
 
@@ -54,13 +55,17 @@ export default async function Header() {
                 </div>
                 <div className="block">
                   <div
-                    style={{ color: secondary_color || "#202020" }}
+                    style={{
+                      color: cta_text_color || secondary_color || "#202020",
+                    }}
                     className="block text-sm xs:text-md sm:text-xl"
                   >
                     {cta_message}
                   </div>
                   <div
-                    style={{ color: secondary_color || "#202020" }}
+                    style={{
+                      color: cta_text_color || secondary_color || "#202020",
+                    }}
                     className="block text-md sm:text-xl"
                   >
                     {cta_phone}

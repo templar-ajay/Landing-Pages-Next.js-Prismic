@@ -21,6 +21,13 @@
             "single": "heading2,strong,em"
           }
         },
+        "title_color": {
+          "type": "Color",
+          "config": {
+            "label": "Title Color",
+            "placeholder": ""
+          }
+        },
         "image": {
           "type": "Image",
           "config": {
@@ -38,6 +45,13 @@
             "label": "Background Image",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "testimonial_color": {
+          "type": "Color",
+          "config": {
+            "label": "Testimonial Color",
+            "placeholder": ""
           }
         }
       },

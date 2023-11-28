@@ -4,7 +4,6 @@
 		"variation": "default",
 		"primary": {
 			"image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
@@ -22,6 +21,9 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
 			"transition_image_1": {
@@ -151,6 +153,16 @@
 						"direction": "ltr"
 					}
 				]
+			},
+			"title_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#c03b1f",
+				"type": "Color"
+			},
+			"text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#b5155a",
+				"type": "Color"
 			}
 		},
 		"items": []
