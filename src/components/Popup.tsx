@@ -51,7 +51,7 @@ export default function KeepMountedModal() {
   }, []);
 
   return (
-    <div>
+    <div className="absolute w-full h-full">
       <Button
         onClick={handleOpen}
         className="absolute w-full h-full hover:bg-blend-darken"
