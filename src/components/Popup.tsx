@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
+import CloseIcon from "@mui/icons-material/Close";
 // import Typography from "@mui/material/Typography";
 
 // State to store the screen width
@@ -63,6 +64,12 @@ export default function KeepMountedModal() {
         aria-describedby="keep-mounted-modal-description"
       >
         <Box sx={style(screenWidth < 500 ? screenWidth - 20 : 500)}>
+          <button
+            className="absolute top-[2rem] right-[2rem] z-50"
+            onClick={handleClose}
+          >
+            <CloseIcon />
+          </button>
           <iframe
             src="https://api.leadconnectorhq.com/widget/survey/r5uGgpzcjkoptC55vMZn"
             style={{
