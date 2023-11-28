@@ -52,10 +52,7 @@ export default function KeepMountedModal() {
 
   return (
     <div className="absolute w-full h-full">
-      <Button
-        onClick={handleOpen}
-        className="absolute w-full h-full hover:bg-blend-darken"
-      ></Button>
+      <Button onClick={handleOpen} className="absolute w-full h-full "></Button>
       <Modal
         keepMounted
         open={open}
