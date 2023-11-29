@@ -1,4 +1,5 @@
 import AfterCtaText from "@/components/AfterCtaText";
+import BackgroundOfSmallImages from "@/components/BackgroundOfSmallImages";
 import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
@@ -75,6 +76,7 @@ const Section3 = async ({ slice }: Section3Props): Promise<JSX.Element> => {
   const client = createClient();
   const settings = await client.getSingle("settings");
   const { primary_color } = settings.data;
+
   return (
     <section>
       {slice.items.map(
@@ -90,14 +92,18 @@ const Section3 = async ({ slice }: Section3Props): Promise<JSX.Element> => {
             after_cta_text,
             title_color,
             paragraph_color,
+            background_of_small_images,
           },
           index
         ) => (
           <div className="relative" key={"div-" + index}>
             <PrismicNextImage
-              className="absolute -z-10 w-full h-full object-cover"
+              className="absolute -z-20 w-full h-full object-cover"
               field={background_image}
             />
+            {background_of_small_images?.uid && (
+              <BackgroundOfSmallImages uid={background_of_small_images?.uid} />
+            )}
             <Bounded
               as="div"
               data-slice-type={slice.slice_type}

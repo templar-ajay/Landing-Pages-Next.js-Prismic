@@ -148,6 +148,16 @@
 							"value": "#225b83",
 							"type": "Color"
 						}
+					],
+					[
+						"background_of_small_images",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "DocumentLink",
+								"id": "mock_document_id"
+							}
+						}
 					]
 				]
 			},
@@ -295,6 +305,16 @@
 							"__TYPE__": "FieldContent",
 							"value": "#87eb53",
 							"type": "Color"
+						}
+					],
+					[
+						"background_of_small_images",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "DocumentLink",
+								"id": "mock_document_id"
+							}
 						}
 					]
 				]

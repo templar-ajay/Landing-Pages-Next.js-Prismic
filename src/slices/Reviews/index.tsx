@@ -9,6 +9,7 @@ import {
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react";
+import BackgroundOfSmallImages from "@/components/BackgroundOfSmallImages";
 
 type componentsType = ({}: any) => JSXMapSerializer;
 
@@ -82,6 +83,9 @@ export type ReviewsProps = SliceComponentProps<Content.ReviewsSlice>;
  * Component for "Reviews" Slices.
  */
 const Reviews = ({ slice }: ReviewsProps): JSX.Element => {
+  const backgroundOfSmallImagesUID =
+    slice.primary.background_of_small_images?.uid;
+
   // const [currentSlide, setCurrentSlide] = useState(0);
   // const lastSlideIndex = slice.items.length - 1;
 
@@ -104,9 +108,12 @@ const Reviews = ({ slice }: ReviewsProps): JSX.Element => {
   return (
     <section className="relative">
       <PrismicNextImage
-        className="absolute -z-10 w-full h-full object-cover"
+        className="absolute -z-20 w-full h-full object-cover"
         field={slice.primary.background_image}
       />
+      {backgroundOfSmallImagesUID && (
+        <BackgroundOfSmallImages uid={backgroundOfSmallImagesUID} />
+      )}
       <Bounded
         as="div"
         data-slice-type={slice.slice_type}

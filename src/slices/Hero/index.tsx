@@ -1,10 +1,12 @@
 import AfterCtaText from "@/components/AfterCtaText";
+import BackgroundOfSmallImages from "@/components/BackgroundOfSmallImages";
 import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
+import { createClient } from "@/prismicio";
 import { Content } from "@prismicio/client";
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import {
   JSXMapSerializer,
   PrismicRichText,
@@ -74,13 +76,36 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  * Component for "Hero" Slices.
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
-  // console.log("slice", slice);
+  const backgroundOfSmallImagesUID =
+    slice.primary.background_of_small_images?.uid;
+
+  // let BackgroundOfImages;
+
+  // const uidOfBackgroundOfSmallImages =
+  //   slice.primary.background_of_small_images?.uid;
+  // console.log("uid of backgroundOfSmallImages", uidOfBackgroundOfSmallImages);
+
+  // if (uidOfBackgroundOfSmallImages) {
+  //   const client = createClient();
+  //   const the_background_of_small_images = await client.getByUID(
+  //     "background_of_small_images",
+  //     uidOfBackgroundOfSmallImages
+  //   );
+
+  //   BackgroundOfImages = the_background_of_small_images?.data;
+  //   console.log("background of images", BackgroundOfImages);
+  // }
+
   return (
     <section className="relative w-full">
       <PrismicNextImage
-        className="absolute -z-10 w-full h-full object-cover"
+        className="absolute -z-20 w-full h-full object-cover"
         field={slice.primary.background_image}
       />
+      {backgroundOfSmallImagesUID && (
+        <BackgroundOfSmallImages uid={backgroundOfSmallImagesUID} />
+      )}
+
       <Bounded
         as="div"
         // className="md:px-[12rem]"

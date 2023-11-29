@@ -4,6 +4,40 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type BackgroundOfSmallImagesDocumentDataSlicesSlice = SmallBackgroundImageSlice;
+
+/**
+ * Content for Background Of Small Images documents
+ */
+interface BackgroundOfSmallImagesDocumentData {
+  /**
+   * Slice Zone field in *Background Of Small Images*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: background_of_small_images.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<BackgroundOfSmallImagesDocumentDataSlicesSlice>;
+}
+
+/**
+ * Background Of Small Images document from Prismic
+ *
+ * - **API ID**: `background_of_small_images`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BackgroundOfSmallImagesDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<BackgroundOfSmallImagesDocumentData>,
+    "background_of_small_images",
+    Lang
+  >;
+
 /**
  * Content for Footer documents
  */
@@ -395,6 +429,7 @@ export type SettingsDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes =
+  | BackgroundOfSmallImagesDocument
   | FooterDocument
   | HeaderDocument
   | HomepageDocument
@@ -534,6 +569,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   transition_image: prismic.ImageField<never>;
+
+  /**
+   * Background Of Small Images field in *Hero → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.background_of_small_images
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  background_of_small_images: prismic.ContentRelationshipField<"background_of_small_images">;
 }
 
 /**
@@ -631,6 +676,16 @@ export interface ReviewsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   testimonial_color: prismic.ColorField;
+
+  /**
+   * Background Of Small Images field in *Reviews → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: reviews.primary.background_of_small_images
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  background_of_small_images: prismic.ContentRelationshipField<"background_of_small_images">;
 }
 
 /**
@@ -801,6 +856,16 @@ export interface Section1SliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   transition_out_image: prismic.ImageField<never>;
+
+  /**
+   * Background Of Small Images field in *Section1 → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.background_of_small_images
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  background_of_small_images: prismic.ContentRelationshipField<"background_of_small_images">;
 }
 
 /**
@@ -936,6 +1001,16 @@ export interface Section2SliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   text_color: prismic.ColorField;
+
+  /**
+   * Background Of Small Images field in *Section2 → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.background_of_small_images
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  background_of_small_images: prismic.ContentRelationshipField<"background_of_small_images">;
 }
 
 /**
@@ -1097,6 +1172,16 @@ export interface Section3SliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   background_image: prismic.ImageField<never>;
+
+  /**
+   * Background Of Small Images field in *Section3 → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].background_of_small_images
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  background_of_small_images: prismic.ContentRelationshipField<"background_of_small_images">;
 }
 
 /**
@@ -1129,6 +1214,91 @@ export type Section3Slice = prismic.SharedSlice<
   Section3SliceVariation
 >;
 
+/**
+ * Primary content in *SmallBackgroundImage → Primary*
+ */
+export interface SmallBackgroundImageSliceDefaultPrimary {
+  /**
+   * Small Background Image field in *SmallBackgroundImage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_background_image.primary.small_background_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  small_background_image: prismic.ImageField<never>;
+
+  /**
+   * Top field in *SmallBackgroundImage → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_background_image.primary.top
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  top: prismic.NumberField;
+
+  /**
+   * Right field in *SmallBackgroundImage → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_background_image.primary.right
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  right: prismic.NumberField;
+
+  /**
+   * Bottom field in *SmallBackgroundImage → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_background_image.primary.bottom
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  bottom: prismic.NumberField;
+
+  /**
+   * Left field in *SmallBackgroundImage → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_background_image.primary.left
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  left: prismic.NumberField;
+}
+
+/**
+ * Default variation for SmallBackgroundImage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SmallBackgroundImageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SmallBackgroundImageSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SmallBackgroundImage*
+ */
+type SmallBackgroundImageSliceVariation = SmallBackgroundImageSliceDefault;
+
+/**
+ * SmallBackgroundImage Shared Slice
+ *
+ * - **API ID**: `small_background_image`
+ * - **Description**: SmallBackgroundImage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SmallBackgroundImageSlice = prismic.SharedSlice<
+  "small_background_image",
+  SmallBackgroundImageSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -1139,6 +1309,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      BackgroundOfSmallImagesDocument,
+      BackgroundOfSmallImagesDocumentData,
+      BackgroundOfSmallImagesDocumentDataSlicesSlice,
       FooterDocument,
       FooterDocumentData,
       HeaderDocument,
@@ -1175,6 +1348,10 @@ declare module "@prismicio/client" {
       Section3SliceDefaultItem,
       Section3SliceVariation,
       Section3SliceDefault,
+      SmallBackgroundImageSlice,
+      SmallBackgroundImageSliceDefaultPrimary,
+      SmallBackgroundImageSliceVariation,
+      SmallBackgroundImageSliceDefault,
     };
   }
 }

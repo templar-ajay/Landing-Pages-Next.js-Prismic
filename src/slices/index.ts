@@ -8,4 +8,5 @@ export const components = {
   section1: dynamic(() => import("./Section1")),
   section2: dynamic(() => import("./Section2")),
   section3: dynamic(() => import("./Section3")),
+  small_background_image: dynamic(() => import("./SmallBackgroundImage")),
 };

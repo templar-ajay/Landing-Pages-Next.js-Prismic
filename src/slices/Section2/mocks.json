@@ -148,6 +148,13 @@
 				"__TYPE__": "FieldContent",
 				"value": "#a23723",
 				"type": "Color"
+			},
+			"background_of_small_images": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
 			}
 		},
 		"items": [

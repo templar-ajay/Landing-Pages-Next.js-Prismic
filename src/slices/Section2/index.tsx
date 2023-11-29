@@ -1,4 +1,5 @@
 import AfterCtaText from "@/components/AfterCtaText";
+import BackgroundOfSmallImages from "@/components/BackgroundOfSmallImages";
 import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
@@ -70,12 +71,18 @@ export type Section2Props = SliceComponentProps<Content.Section2Slice>;
  * Component for "Section2" Slices.
  */
 const Section2 = ({ slice }: Section2Props): JSX.Element => {
+  const backgroundOfSmallImagesUID =
+    slice.primary.background_of_small_images?.uid;
+
   return (
     <div className="relative">
       <PrismicNextImage
-        className="absolute -z-10 w-full h-full object-cover"
+        className="absolute -z-20 w-full h-full object-cover"
         field={slice.primary.background_image}
       />
+      {backgroundOfSmallImagesUID && (
+        <BackgroundOfSmallImages uid={backgroundOfSmallImagesUID} />
+      )}
       <Bounded
         as="section"
         className="max-w-5xl mx-auto"
