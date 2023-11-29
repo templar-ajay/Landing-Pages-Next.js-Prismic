@@ -83,6 +83,7 @@ export type ReviewsProps = SliceComponentProps<Content.ReviewsSlice>;
  * Component for "Reviews" Slices.
  */
 const Reviews = ({ slice }: ReviewsProps): JSX.Element => {
+  // @ts-ignore
   const backgroundOfSmallImagesUID =
     slice.primary.background_of_small_images?.uid;
 

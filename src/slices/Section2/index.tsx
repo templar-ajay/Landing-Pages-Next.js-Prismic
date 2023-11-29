@@ -71,6 +71,7 @@ export type Section2Props = SliceComponentProps<Content.Section2Slice>;
  * Component for "Section2" Slices.
  */
 const Section2 = ({ slice }: Section2Props): JSX.Element => {
+  // @ts-ignore
   const backgroundOfSmallImagesUID =
     slice.primary.background_of_small_images?.uid;
 

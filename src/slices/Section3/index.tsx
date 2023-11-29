@@ -101,9 +101,14 @@ const Section3 = async ({ slice }: Section3Props): Promise<JSX.Element> => {
               className="absolute -z-20 w-full h-full object-cover"
               field={background_image}
             />
-            {background_of_small_images?.uid && (
-              <BackgroundOfSmallImages uid={background_of_small_images?.uid} />
-            )}
+            {
+              // @ts-ignore
+              background_of_small_images?.uid && (
+                <BackgroundOfSmallImages
+                  uid={background_of_small_images?.uid}
+                />
+              )
+            }
             <Bounded
               as="div"
               data-slice-type={slice.slice_type}
