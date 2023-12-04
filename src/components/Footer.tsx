@@ -16,9 +16,9 @@ export default async function Footer() {
             src="https://api.leadconnectorhq.com/widget/survey/r5uGgpzcjkoptC55vMZn"
             style={{
               border: "none",
-              position: "absolute",
-              bottom: 0,
-              left: 0,
+              // position: "absolute",
+              // bottom: 0,
+              // left: 0,
               width: "100%",
               height: "100%",
               backgroundColor: "transparent",
@@ -29,6 +29,7 @@ export default async function Footer() {
           ></iframe>
           <script
             async
+            defer
             src="https://link.msgsndr.com/js/form_embed.js"
           ></script>
         </div>
