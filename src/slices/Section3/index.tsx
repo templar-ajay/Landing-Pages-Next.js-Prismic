@@ -88,7 +88,6 @@ const Section3 = async ({ slice }: Section3Props): Promise<JSX.Element> => {
             keep_image_right,
             background_image,
             cta_text,
-            cta_link,
             after_cta_text,
             title_color,
             paragraph_color,
@@ -146,7 +145,7 @@ const Section3 = async ({ slice }: Section3Props): Promise<JSX.Element> => {
                     </div>
                     {Boolean(cta_text) && (
                       <div className="cta-div">
-                        <Button field={cta_link}>{cta_text}</Button>
+                        <Button>{cta_text}</Button>
                       </div>
                     )}
                     <AfterCtaText

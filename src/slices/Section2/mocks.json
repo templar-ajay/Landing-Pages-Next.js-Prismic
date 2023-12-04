@@ -91,13 +91,6 @@
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
-			"cta_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev"
-				}
-			},
 			"cta_text": {
 				"__TYPE__": "FieldContent",
 				"type": "Text",

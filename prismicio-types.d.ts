@@ -531,16 +531,6 @@ export interface HeroSliceDefaultPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
-   * CTA Link field in *Hero → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.cta_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  cta_link: prismic.LinkField;
-
-  /**
    * After CTA Text field in *Hero → Primary*
    *
    * - **Field Type**: Rich Text
@@ -808,16 +798,6 @@ export interface Section1SliceDefaultPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
-   * CTA Link field in *Section1 → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: section1.primary.cta_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  cta_link: prismic.LinkField;
-
-  /**
    * After CTA Text field in *Section1 → Primary*
    *
    * - **Field Type**: Rich Text
@@ -931,16 +911,6 @@ export interface Section2SliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   cta_text: prismic.KeyTextField;
-
-  /**
-   * CTA Link field in *Section2 → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: section2.primary.cta_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  cta_link: prismic.LinkField;
 
   /**
    * After CTA Text field in *Section2 → Primary*
@@ -1121,16 +1091,6 @@ export interface Section3SliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   cta_text: prismic.KeyTextField;
-
-  /**
-   * CTA Link field in *Section3 → Items*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: section3.items[].cta_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  cta_link: prismic.LinkField;
 
   /**
    * After CTA Text field in *Section3 → Items*

@@ -28,13 +28,6 @@
 				},
 				"__TYPE__": "EmbedContent"
 			},
-			"cta_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev"
-				}
-			},
 			"header": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [

@@ -54,13 +54,6 @@
 				"type": "Text",
 				"value": "CLAIM YOUR FREE STRATEGY SESSION"
 			},
-			"cta_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io"
-				}
-			},
 			"transition_out_image": {
 				"origin": {
 					"id": "main",

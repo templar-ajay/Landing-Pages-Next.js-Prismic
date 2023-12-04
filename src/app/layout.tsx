@@ -9,6 +9,7 @@ import { PrismicPreview } from "@prismicio/next";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Providers } from "@/app/providers";
 
 const body = Nunito_Sans({
   subsets: ["latin"],
@@ -59,8 +60,10 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(body.variable, display.variable)}>
-        <Header />
-        {children}
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
         <Footer />
         <PrismicPreview repositoryName={repositoryName} />
       </body>

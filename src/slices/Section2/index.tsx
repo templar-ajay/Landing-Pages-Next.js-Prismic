@@ -140,9 +140,7 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
             </div>
           ))}
           <div className="w-full pr-[1rem] xs:pr-[2rem] sm:pr-[4rem] md:[3rem]">
-            <Button field={slice.primary.cta_link}>
-              {slice.primary.cta_text}
-            </Button>
+            <Button>{slice.primary.cta_text}</Button>
             <AfterCtaText
               field={slice.primary.after_cta_text}
               color={slice.primary.text_color}

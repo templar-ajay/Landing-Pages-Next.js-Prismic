@@ -123,17 +123,6 @@
 						}
 					],
 					[
-						"cta_link",
-						{
-							"__TYPE__": "LinkContent",
-							"value": {
-								"__TYPE__": "ExternalLink",
-								"url": "",
-								"target": null
-							}
-						}
-					],
-					[
 						"title_color",
 						{
 							"__TYPE__": "FieldContent",
@@ -226,17 +215,6 @@
 							"__TYPE__": "FieldContent",
 							"type": "Text",
 							"value": "CLAIM YOUR FREE STRATEGY SESSION"
-						}
-					],
-					[
-						"cta_link",
-						{
-							"__TYPE__": "LinkContent",
-							"value": {
-								"__TYPE__": "ExternalLink",
-								"url": "https://slicemachine.dev",
-								"target": "_blank"
-							}
 						}
 					],
 					[
